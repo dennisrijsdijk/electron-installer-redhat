@@ -1,16 +1,22 @@
 {
-  "name": "electron-installer-redhat",
+  "name": "@dennisrijsdijk/electron-installer-redhat",
   "description": "Create a Red Hat package for your Electron app.",
   "version": "3.4.0",
   "license": "MIT",
-  "author": {
-    "name": "Daniel Perez Alvarez",
-    "email": "unindented@gmail.com",
-    "url": "http://unindented.org/"
-  },
+  "authors": [
+    {
+      "name": "Daniel Perez Alvarez",
+      "email": "unindented@gmail.com",
+      "url": "http://unindented.org/"
+    },
+    {
+      "name": "Dennis Rijsdijk",
+      "email": "hello@dennis.gg"
+    }
+  ],
   "repository": {
     "type": "git",
-    "url": "git://github.com/electron-userland/electron-installer-redhat.git"
+    "url": "git://github.com/dennisrijsdijk/electron-installer-redhat.git"
   },
   "keywords": [
     "electron",
