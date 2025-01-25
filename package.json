@@ -37,7 +37,7 @@
     "lint": "eslint .",
     "spec": "mocha",
     "test": "npm run lint && npm run spec",
-    "prepare": "husky install"
+    "prepare": "husky"
   },
   "dependencies": {
     "@malept/cross-spawn-promise": "^1.0.0",
@@ -57,7 +57,7 @@
     "eslint-plugin-node": "^11.0.0",
     "eslint-plugin-promise": "^5.1.0",
     "eslint-plugin-standard": "^5.0.0",
-    "husky": "^6.0.0",
+    "husky": "^9.1.7",
     "lint-staged": "^10.2.7",
     "mocha": "^8.0.1",
     "promise-retry": "^2.0.1",
