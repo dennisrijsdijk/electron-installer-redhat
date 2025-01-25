@@ -25,6 +25,11 @@ const argv = yargs
     describe: 'JSON file that contains the metadata for your application',
     config: true
   })
+  .option('strip', {
+    describe: 'strip all debugging information from included executables',
+    type: 'boolean',
+    default: true
+  })
   .options('options.requires', { array: true, hidden: true })
   .options('options.execArguments', { array: true, hidden: true })
   .options('options.categories', { array: true, hidden: true })
