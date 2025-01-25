@@ -1,7 +1,7 @@
 {
   "name": "@dennisrijsdijk/electron-installer-redhat",
   "description": "Create a Red Hat package for your Electron app.",
-  "version": "3.4.2",
+  "version": "3.5.0",
   "license": "MIT",
   "authors": [
     {
