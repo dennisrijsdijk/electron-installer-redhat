@@ -1,6 +1,6 @@
 ![Electron Installer for Red Hat](resources/logo.png)
 
-# electron-installer-redhat [![Version](https://img.shields.io/npm/v/electron-installer-redhat.svg)](https://www.npmjs.com/package/@dennisrijsdijk/electron-installer-redhat)
+# electron-installer-redhat [![Version](https://img.shields.io/npm/v/@dennisrijsdijk/electron-installer-redhat.svg)](https://www.npmjs.com/package/@dennisrijsdijk/electron-installer-redhat)
 
 > Create a Red Hat package for your Electron app.
 
