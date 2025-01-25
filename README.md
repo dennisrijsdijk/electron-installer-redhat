@@ -1,6 +1,6 @@
 ![Electron Installer for Red Hat](resources/logo.png)
 
-# electron-installer-redhat [![Version](https://img.shields.io/npm/v/electron-installer-redhat.svg)](https://www.npmjs.com/package/electron-installer-redhat) [![Build Status](https://img.shields.io/travis/electron-userland/electron-installer-redhat.svg)](http://travis-ci.org/electron-userland/electron-installer-redhat)
+# electron-installer-redhat [![Version](https://img.shields.io/npm/v/electron-installer-redhat.svg)](https://www.npmjs.com/package/@dennisrijsdijk/electron-installer-redhat)
 
 > Create a Red Hat package for your Electron app.
 
@@ -28,13 +28,13 @@ $ sudo apt-get install rpm
 For use from command-line:
 
 ```
-$ npm install -g electron-installer-redhat
+$ npm install -g @dennisrijsdijk/electron-installer-redhat
 ```
 
 For use in npm scripts or programmatically:
 
 ```
-$ npm install --save-dev electron-installer-redhat
+$ npm install --save-dev @dennisrijsdijk/electron-installer-redhat
 ```
 
 
@@ -93,16 +93,16 @@ How do you turn that into a Red Hat package that your users can install?
 
 ### Command-Line
 
-If you want to run `electron-installer-redhat` straight from the command-line, install the package globally:
+If you want to run `@dennisrijsdijk/electron-installer-redhat` straight from the command-line, install the package globally:
 
 ```
-$ npm install -g electron-installer-redhat
+$ npm install -g @dennisrijsdijk/electron-installer-redhat
 ```
 
 And point it to your built app:
 
 ```
-$ electron-installer-redhat --src dist/app-linux-x64/ --dest dist/installers/ --arch x86_64
+$ npx --no-install @dennisrijsdijk/electron-installer-redhat --src dist/app-linux-x64/ --dest dist/installers/ --arch x86_64
 ```
 
 You'll end up with the package at `dist/installers/app-0.0.1-1.x86_64.rpm`.
@@ -112,7 +112,7 @@ You'll end up with the package at `dist/installers/app-0.0.1-1.x86_64.rpm`.
 If you want to run `electron-installer-redhat` through npm, install the package locally:
 
 ```
-$ npm install --save-dev electron-installer-redhat
+$ npm install --save-optional @dennisrijsdijk/electron-installer-redhat
 ```
 
 Edit the `scripts` section of your `package.json`:
@@ -125,12 +125,14 @@ Edit the `scripts` section of your `package.json`:
   "scripts": {
     "start": "electron .",
     "build": "electron-packager . app --platform linux --arch x64 --out dist/",
-    "rpm64": "electron-installer-redhat --src dist/app-linux-x64/ --dest dist/installers/ --arch x86_64"
+    "rpm64": "@dennisrijsdijk/electron-installer-redhat --src dist/app-linux-x64/ --dest dist/installers/ --arch x86_64"
   },
   "devDependencies": {
-    "electron-installer-redhat": "*",
     "electron-packager": "*",
     "electron-prebuilt": "*"
+  },
+  "optionalDependencies": {
+    "@dennisrijsdijk/electron-installer-redhat": "^3.4.2"
   }
 }
 ```
@@ -148,13 +150,13 @@ You'll end up with the package at `dist/installers/app-0.0.1-1.x86_64.rpm`.
 Install the package locally:
 
 ```shell
-$ npm install --save-dev electron-installer-redhat
+$ npm install --save-optional @dennisrijsdijk/electron-installer-redhat
 ```
 
 And write something like this:
 
 ```javascript
-const installer = require('electron-installer-redhat')
+const installer = require('@dennisrijsdijk/electron-installer-redhat')
 
 const options = {
   src: 'dist/app-linux-x64/',
@@ -197,7 +199,7 @@ Even though you can pass most of these options through the command-line interfac
 And pass that instead with the `config` option:
 
 ```shell
-$ electron-installer-redhat --src dist/app-linux-x64/ --arch x86_64 --config config.json
+$ npx --no-install @dennisrijsdijk/electron-installer-redhat --src dist/app-linux-x64/ --arch x86_64 --config config.json
 ```
 
 Anyways, here's the full list of options:
@@ -403,25 +405,26 @@ Path to [installation scripts](https://docs.fedoraproject.org/en-US/packaging-gu
 
 #### options.desktopTemplate
 Type: `String`
-Default: [`resources/desktop.ejs`](https://github.com/electron-userland/electron-installer-redhat/blob/main/resources/desktop.ejs)
+Default: [`resources/desktop.ejs`](https://github.com/dennisrijsdijk/electron-installer-redhat/blob/main/resources/desktop.ejs)
 
 The absolute path to a custom template for the generated [FreeDesktop.org desktop entry](http://standards.freedesktop.org/desktop-entry-spec/desktop-entry-spec-latest.html) file.
 
 #### options.specTemplate
 Type: `String`
-Default: [`resources/spec.ejs`](https://github.com/electron-userland/electron-installer-redhat/blob/main/resources/spec.ejs)
+Default: [`resources/spec.ejs`](https://github.com/dennisrijsdijk/electron-installer-redhat/blob/main/resources/spec.ejs)
 
 The absolute path to a custom template for the generated [SPEC file](https://rpm-packaging-guide.github.io/#what-is-a-spec-file).
 
 ## Meta
 
-* Code: `git clone git://github.com/electron-userland/electron-installer-redhat.git`
-* Home: <https://github.com/electron-userland/electron-installer-redhat/>
+* Code: `git clone git://github.com/dennisrijsdijk/electron-installer-redhat.git`
+* Home: <https://github.com/dennisrijsdijk/electron-installer-redhat/>
 
 
 ## Contributors
 
 * Daniel Perez Alvarez ([unindented@gmail.com](mailto:unindented@gmail.com))
+* Dennis Rijsdijk ([hello@dennis.gg](mailto:hello@dennis.gg))
 
 
 ## License
